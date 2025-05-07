@@ -1,0 +1,61 @@
+body{
+    background-color: black;    
+    margin: 0;
+    top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: beige;
+    text-align: center;
+   
+}
+
+li{
+    padding: 5px;
+    display: inline;
+}
+a{
+    
+     text-decoration: none;
+     background-color: gold;
+     padding: 1rem ;
+     margin-left: 2%;
+     margin-right: 2%;
+    font-weight: 1000;
+    
+
+}
+nav{
+    background-color: gold;
+    padding: 1rem ;
+    padding-bottom: 5px;
+}
+a:hover{
+    background-color: white;
+}
+section{
+    margin: 1.5rem;
+    border: 0.5px solid gold;
+    border-radius: 12px;
+    
+}
+div{
+    margin: 1.5rem;
+
+}
+
+div p{
+    float: left;
+    
+}
+div span{
+    margin-left: 20rem;
+    text-align: center;
+}
+div img{
+    padding-top: 0px;
+    float: right;
+   
+}
+div{
+    border: 1px solid gold;
+}

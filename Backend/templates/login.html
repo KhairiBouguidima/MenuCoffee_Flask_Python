@@ -1,0 +1,25 @@
+{%extends 'layoutClient.html'%}
+{%block content%}
+<form action="" method="post">
+{{log.hidden_tag()}}
+<h4 class="h4"> Dare el <strong>G</strong>ahwa</h4>
+<div id="container5">
+<div id='form'>
+    <p>{{log.Email.label}}</p>
+    <p> {{log.Email(class_="bg")}}</p>
+{%for error in log.Email.errors%}
+<span>{{error}}</span>
+{%endfor%}
+</div>
+<div id='form'>
+    <p>{{log.Password.label}}</p>
+    <p> {{log.Password(class_="bg")}}</p>
+</div>
+<div id='form'>
+    <p>{{log.Submit(class_="bg2")}}</p></div>
+</div>
+
+
+</form>
+
+{%endblock%}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style1.css')}}">
+    <link rel="icon" href="pngwing.com.png">
+    <title>Dare el Gahwa-{{title}}</title>
+    <script src="aka.js"></script>
+</head>
+<body>
+    
+    <nav id="navbar">
+
+          <a class="titre"href="{{url_for('Admin')}}"> Dare el <strong>G</strong>ahwa</a>
+         <span>
+          <a href="#Coffee">Coffee</a>
+          <a href="#Italian soda">Italian soda</a>
+          <a href="#Frappe">Frappe</a>
+          <a href="#Non-coffee">Non_coffee</a>
+          <a href="#Smoothie">Smoothie</a>
+          <a href="#rafraîchissement">Rafraîchissement</a>
+        </span>    
+            
+      </nav>
+{%block content%}
+
+{%endblock%}
+<footer>
+  <p>&copy; 2024 Dare el Gahwa. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

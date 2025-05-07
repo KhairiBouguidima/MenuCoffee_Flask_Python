@@ -1,0 +1,18 @@
+{%extends 'layoutadmin.html'%}
+{%block content%}
+    <header>
+        <h1>Admin Dashboard</h1>
+        <p class="intro-text">Welcome to the Admin Dashboard. From here you can manage your menu items and view important data.</p>
+    </header>
+
+    <section id="admin-dashboard">
+        <div class="action-list">
+            <ul>
+                <li><a href="{{url_for('Add')}}" class="btn-action">Add New Menu Item</a></li>
+                <li><a href="{{url_for('Admin')}}" class="btn-action">View Orders</a></li>
+                <li><a href="{{url_for('home')}}" class="btn-action">View Profits</a></li>
+            </ul>
+        </div>
+    </section>
+
+{%endblock%}

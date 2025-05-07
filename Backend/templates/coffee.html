@@ -1,0 +1,264 @@
+{%extends 'layoutClient.html'%}
+{%block content%}
+
+    <header>
+        <form action="serveur.php" method="get">
+        <h1>Dare el <h3><strong>G</strong>ahwa</h3></h1>
+        <input id="tn" type="text" placeholder="entre name of your order">
+        <div>
+            <input id="tn1" type="text" placeholder="entre number of your table">
+        </div>
+    <button type="submit" onclick="sendorde()">submit</button>    
+        </header>
+    <div class="table-number">
+        <label for="input">Numéro de table : </label>
+        <input type="text" id="table-input" placeholder="Entrez votre numéro de table">
+        <button id="order-btn" onclick="sendOrder()">Passer la commande</button>
+    </div>
+
+    <script>
+        
+        function showDetails(title, description) {
+            alert(`Vous avez choisi ${title}.\nDescription : ${description}`);
+        }
+
+        function sendOrder() {
+            const tableNumber = document.getElementById('table-input').value;
+            const selectedMenuItem = document.querySelector('input[type="radio"]:checked');
+            if(selectedMenuItem) {
+                const menuItemTitle = selectedMenuItem.parentElement.querySelector('h2').innerText;
+                alert(`Commande passée avec succès!\nTable numéro ${tableNumber}\nVous avez choisi : ${menuItemTitle}`);
+            } else {
+                alert("Veuillez sélectionner un article avant de passer la commande.");
+            }
+        }
+        function sendorde(){
+            const tn=document.getElementById('tn').value;
+            const order=document.getElementById('tn1').value;
+            alert(`Commande passée avec succès!\nTable numéro ${tn}\nVous avez choisi : ${order}`);
+        }
+    </script>
+
+    <h1 id="Coffee">Coffee</h1>
+    
+    <section>
+        
+        <div class="menu-item" >
+            <h2>Espresso</h2>
+            <img src="espresso.png">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Cappuccino</h2>
+            <img src="cappuccino.png ">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Coffee Latte </h2>
+            <img src="pngwin1g.com.png">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Hot Mocha</h2>
+            <img src="mocha.webp">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Caramel Mochiato</h2>
+            <img src="cara_mochiato.webp">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+            
+        </div>
+        <div class="menu-item" >
+            <h2>Amaricano</h2>
+            <img src="americano.png">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+    </section>
+    <h1 id="Italian soda">Italian soda</h1>
+    <section>
+        <div class="menu-item" >
+            <h2>Kiwi soda</h2>
+            <img src="kiwisoda.png">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>lime soda</h2>
+            <img src="limesoda.png">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>Classic Black</h2>
+            <p>Espresso shot with a hint of gold sugar.</p>
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Gold Rush</h2>
+            <p>Espresso, steamed milk, and a touch of honey.</p>
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        
+
+    </section>
+
+    <h1 id="Frappe">Frappe
+    </h1>
+    <section>
+        <div class="menu-item" >
+            <h2>Coffee Frappe</h2>
+            <img src="cofrappe.png" alt="">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Coffee Milk Frappe</h2>
+           <img src="cmfrappe.png" alt="">
+           <a href="">1.5d</a>
+           <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>tea frappe</h2>
+            <img src="teafrappe.png" alt="">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Choclate frappe</h2>
+           <img src="cocklatfra.png" alt="">
+           <a href="">1.5d</a>
+           <input id="choose" type="radio">
+        </div>
+
+        
+
+    </section>
+    <h1 id="Non-coffee">Non Coffee</h1>
+    <section>
+        <div class="menu-item" >
+            <h2>Tea</h2>
+            <img src="tea.png" alt="">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Tea Milk</h2>
+            <img src="teamilk.png" alt="">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>Water</h2>
+            <img src="water.png" alt="">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Chocolat chaud</h2>
+            <img src="chocolatechaud.png" alt="">
+            <a href="">2d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>Fanta</h2>
+            <img src="fanta.png" alt="">
+            <a href="">2.5d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>coca colla</h2>
+            <img src="coca.png" alt="">
+            <a href="">2.5d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>Boga</h2>
+            <img src="boga1.jpg" alt="">
+            <a href="">2.5d</a>
+            <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>schweppes</h2>
+            <img src="schweppes (1).png" alt="">
+            <a href="">2.5d</a>
+            <input id="choose" type="radio">
+        </div>
+        
+
+    </section>
+
+    <h1 id="Smoothie">Smoothie</h1>
+    <section>
+        <div class="menu-item" >
+            <h2>Smoothie Banana</h2>
+           <img src="smobanana.png" alt="">
+           <a href="">3d</a>
+           <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Smoothie Lime</h2>
+           <img src="smolime.png" alt="">
+           <a href="">3d</a>
+           <input id="choose" type="radio">
+        </div>
+        <div class="menu-item" >
+            <h2>Smoothie Peche</h2>
+            <img src="smopeche.png" alt="">
+            <a href="">3d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Smoothie Orange</h2>
+            <img src="smorange.png" alt="">
+            <a href="">3d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        
+
+    </section>
+    <h1 id="rafraîchissement">rafraîchissement
+    </h1>
+    <section>
+        <div class="menu-item" >
+            <h2>Millefeille</h2>
+            <img src="mille.png" alt="">
+            <a href="">1.5d</a>
+            <input id="choose" type="radio">
+        </div>
+
+        <div class="menu-item" >
+            <h2>Morceau Gateau</h2>
+           <img src="gateau.png" alt="">
+           <a href="">1.5d</a>
+           <input id="choose" type="radio">
+        </div>
+    </section>
+</form>
+    
+   
+    
+
+{%endblock%}

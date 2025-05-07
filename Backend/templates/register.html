@@ -1,0 +1,25 @@
+{%extends 'layoutClient.html'%}
+{%block content%}
+<form action="" method="post">
+{{reg.hidden_tag()}}
+<h4 class="h4"> Dare el <strong>G</strong>ahwa</h4>
+<div id="container5">
+<div id='form'>
+    <p>{{reg.Email.label}}</p>
+    <p> {{reg.Email(class_="bg")}}</p>
+{%for error in reg.Email.errors%}
+<span>{{error}}</span>
+{%endfor%}
+</div>
+<div id='form'>
+    <p>{{reg.Password.label}}</p>
+    <p> {{reg.Password(class_="bg")}}</p>
+</div>
+<div id='form'>
+    <p>{{reg.Submit(class_="bg2")}}</p></div>
+</div>
+
+
+</form>
+
+{%endblock%}
